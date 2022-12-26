@@ -24,7 +24,7 @@ namespace SMDP.Controllers
     [ApiController]
     [Route("[controller]")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-
+    
 
     public class DataController : ControllerBase
     {
@@ -130,7 +130,7 @@ namespace SMDP.Controllers
             string userAgent = Request.Headers["User-Agent"].ToString();
             string method = Request.Method.ToString();
             string userr = User?.Identity.Name;
-            var lettertypeList = _validationService.LetterType();
+            var lettertypeList = _validationService.Lettertype();
             var json = System.Text.Json.JsonSerializer.Serialize(lettertypeList);
 
 

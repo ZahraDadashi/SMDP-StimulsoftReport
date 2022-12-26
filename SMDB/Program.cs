@@ -5,15 +5,19 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using SMDP.SMDPModels;
 using System.Text;
-
-
+using SMDP.Extensions;
+using SMDP;
+//using Amazon.Runtime.Internal.Util;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Diagnostics;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//builder.Services.AddDbContext<SmdpContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connectionString")));
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<SmdpContext>(options=> options.UseSqlServer("mysqlconnection:connectionString"));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options=>
 {
@@ -73,8 +77,6 @@ builder.Services.AddCors(options =>
                           .AllowAnyMethod());
 });
 
-//builder.Services.AddHttpContextAccessor();
-;
 
 
 
@@ -88,6 +90,8 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     app.UseSwaggerUI();
     
 }
+
+
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 app.UseAuthorization();

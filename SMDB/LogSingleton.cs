@@ -2,20 +2,17 @@
 using static System.IO.Directory;
 using static System.IO.Path;
 using static System.Environment;
-
 using System.Diagnostics;
 using System.Security.Claims;
 
 namespace SMDP
 {
     public class LogSingleton : DelegatingHandler
-    {
-        
-
-        private string fileName;
+    {       
+        private string filePath;
         private StreamWriter sw;
         private static LogSingleton instance;
-
+        private IConfiguration _configuration;
         public static LogSingleton Instance
         {
             get
@@ -32,19 +29,26 @@ namespace SMDP
 
         private LogSingleton()
         {
-            fileName = "log.txt";
-            sw = new StreamWriter(fileName);
-        }
-       
+            _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+            var filePath = _configuration.GetSection("AppSettings:Path").Value;
+            string logFile = Combine(filePath, "log.txt");
+            if (!File.Exists(logFile))
+            {
+                File.Create(logFile).Dispose();
+            }
+
+            sw = new StreamWriter(logFile);           
+
+        }      
         public void WriteRequest(string data)
         {
             sw.WriteLine($"{DateTime.Now} -- {data}");
-     
-            sw.Flush();     
+
+            sw.Flush();
         }
-        
+
         public void GetUser(string userId)
-        {         
+        {
             sw.WriteLine($"You are logged in with: {userId}");
 
             sw.Flush();

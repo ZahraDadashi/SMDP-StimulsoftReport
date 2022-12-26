@@ -11,6 +11,9 @@ using SMDP;
 using SMDP.Repository;
 using SMDP.SMDPModels;
 using SMDP.Service;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+
 namespace SMDP.Controllers
 {
     [Route("api/[controller]")]
@@ -29,10 +32,10 @@ namespace SMDP.Controllers
             _logger = LogSingleton.Instance;
             _smdps = new UserRepository(new SMDPModels.SmdpContext());
             _validationService = new ValidationService();
-
+           
         }
 
-        [HttpPost("register")]
+        [HttpPost("register")]       
         public async Task<ActionResult<Userr>> Register(UserDto request)
         {
             string userAgent = Request.Headers["User-Agent"].ToString();
@@ -60,32 +63,37 @@ namespace SMDP.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<string>> Login(UserDto request)
         {
-            string userAgent = Request.Headers["User-Agent"].ToString();           
-            string method = Request.Method.ToString();
-                  
-            Userr userlogin = new Userr();
-            CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
-            userlogin.UserName = request.UserName;
-            userlogin.PasswordHash = passwordHash;
-            userlogin.PasswordSalt = passwordSalt;
+          
+                string userAgent = Request.Headers["User-Agent"].ToString();
+                string method = Request.Method.ToString();
 
-            var usertable =_smdps.Login(userlogin);
-                                 
-            if (usertable == null)
-            {
-                return BadRequest("User not found.");
-            }
+                Userr userlogin = new Userr();
+                CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
+                userlogin.UserName = request.UserName;
+                userlogin.PasswordHash = passwordHash;
+                userlogin.PasswordSalt = passwordSalt;
 
-            if (!VerifyPasswordHash(request.Password, usertable.PasswordHash, usertable.PasswordSalt))
-            {
-                return BadRequest("Wrong password.");
-            }
-            string token = CreateToken(userlogin);
-            _logger.WriteRequest(userAgent);         
-            _logger.WriteKind(method);
-           
-            return Ok(token);
-            
+                var usertable = _smdps.Login(userlogin);
+
+                if (usertable == null)
+                {
+                    return BadRequest("User not found.");
+                }
+
+
+                if (!VerifyPasswordHash(request.Password, usertable.PasswordHash, usertable.PasswordSalt))
+                {
+                    return BadRequest("Wrong password.");
+                }
+
+
+                string token = CreateToken(userlogin);
+                var myTokenObject = new {token};
+                var json = JsonConvert.SerializeObject(myTokenObject);
+                _logger.WriteRequest(userAgent);
+                _logger.WriteKind(method);
+                return Ok(json);
+                          
         }
 
         private string CreateToken(Userr user)
