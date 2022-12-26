@@ -31,9 +31,8 @@ public partial class SmdpContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    => optionsBuilder.UseSqlServer("server =.; user id = sa; password=111@a;initial catalog = SMDP; encrypt=false");        
-    
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)       
+        => optionsBuilder.UseSqlServer(_configuration.GetConnectionString("connectionString"));
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
