@@ -7,15 +7,11 @@ using SMDP.SMDPModels;
 using System.Text;
 using SMDP.Extensions;
 using SMDP;
-//using Amazon.Runtime.Internal.Util;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Diagnostics;
 using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-//builder.Services.AddDbContext<SmdpContext>(options => options.UseSqlServer(Configuration.GetConnectionString("connectionString")));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -82,8 +78,6 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-
-
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 { 
     app.UseSwagger();
@@ -91,12 +85,12 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     
 }
 
-
 app.UseCors("AllowAll");
+app.ConfigureExceptionHandler();
+
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.UseAuthentication();
-
 
 app.MapControllers();
 

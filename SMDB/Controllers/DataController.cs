@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 
+
 namespace SMDP.Controllers
 {
     
@@ -30,11 +31,14 @@ namespace SMDP.Controllers
     {
         private ValidationService _validationService;
         
-        private LogSingleton _logger;       
+        private LogSingleton _logger;
+
         public DataController()
         {
             _validationService = new ValidationService();
             _logger = LogSingleton.Instance;
+       
+
         }
 
         [ProducesResponseType(typeof(List<DailyPrice>), 200)]
@@ -61,6 +65,8 @@ namespace SMDP.Controllers
             }
             else
             {
+                throw new ArgumentException("Violation Exception while accessing the resource.");
+
                 return BadRequest("enter a valid number");
             }
         }
@@ -68,7 +74,7 @@ namespace SMDP.Controllers
         [ProducesResponseType(typeof(List<Fund>), 200)]
         [HttpGet("/Fund")]
         public dynamic Fund()
-        {           
+        {            
             string userAgent = Request.Headers["User-Agent"].ToString();
             string method = Request.Method.ToString();
             string userr = User?.Identity.Name;
@@ -80,7 +86,8 @@ namespace SMDP.Controllers
             _logger.WriteKind(method);
             _logger.GetUser(userr);
             _logger.WriteResponse(json);
-           
+            
+
             return Fundlist;
         }
       

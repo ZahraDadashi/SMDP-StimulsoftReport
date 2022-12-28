@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace SMDP.SMDPModels
 {
@@ -8,7 +9,7 @@ namespace SMDP.SMDPModels
         public string Message { get; set; }
         public override string ToString()
         {
-            return JsonSerializer.Serialize(this);
+            return JsonConvert.SerializeObject(this);
         }
     }
 }
