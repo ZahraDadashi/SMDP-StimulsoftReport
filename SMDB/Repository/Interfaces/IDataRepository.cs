@@ -1,13 +1,15 @@
-﻿namespace SMDP.Repository
+﻿using SMDP.SMDPModels;
+
+namespace SMDP.Repository
 {
     public interface IDataRepository : IDisposable
     {
         
-        dynamic DailyPrice(long a);
-        dynamic Fund();
-        dynamic Industry();
-        dynamic Instrument();
-        dynamic Lettertype();     
+        List<DailyPrice> DailyPrice(long a);
+        List<Fund> Fund();
+        List<Industry> Industry();
+        List<Instrument> Instrument();
+        List<LetterType> Lettertype();     
 
     }
 }

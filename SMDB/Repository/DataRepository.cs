@@ -4,9 +4,8 @@ namespace SMDP.Repository
 {
     public class DataRepository : IDataRepository
     {
-        private readonly SmdpContext _db;
-
-        public  DataRepository (SmdpContext db)
+        private readonly SmdpContext _db;        
+        public DataRepository (SmdpContext db)
         {
             _db = db;
         }
@@ -16,39 +15,33 @@ namespace SMDP.Repository
             throw new NotImplementedException();
         }
 
-        public dynamic DailyPrice(long a)
+        public List<DailyPrice> DailyPrice(long a)
         {
-            var dailypricelist = _db.DailyPrices.Where(i =>
-              i.InsCode == a).ToList();
+            var dailypricelist = _db.DailyPrices.ToList();
             return dailypricelist;
-
         }
         
-        public dynamic Fund()
+        public List<Fund> Fund()
         {
-            var fundlist = _db.Funds.Select(i =>
-            new { i }).ToList();
+            var fundlist = _db.Funds.ToList();
             return fundlist;
         }
 
-        public dynamic Industry()
+        public List<Industry> Industry()
         {           
-            var industrylist = _db.Industries.Select(i =>
-            new { i }).ToList();
+            var industrylist = _db.Industries.ToList();
             return industrylist;
         }
 
-        public dynamic Instrument()
+        public List<Instrument> Instrument()
         {
-            var instrumentlist = _db.Instruments.Select(i =>
-            new { i }).ToList();
+            var instrumentlist = _db.Instruments.ToList();
             return instrumentlist;
         }
 
-        public dynamic Lettertype()
+        public List<LetterType> Lettertype()
         {
-            var letterTypelist = _db.LetterTypes.Select(i =>
-            new { i }).ToList();
+            var letterTypelist = _db.LetterTypes.ToList();
             return letterTypelist;
         }
 

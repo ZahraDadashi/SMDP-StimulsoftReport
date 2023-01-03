@@ -14,10 +14,12 @@ using SMDP.Repository;
 using System.Security.Cryptography;
 using SMDP.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-
-
-
-
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dictionary;
+using Microsoft.Data.SqlClient;
+using System.Data;
+using Stimulsoft.Base;
+using Stimulsoft.Report.Mvc;
 
 namespace SMDP.Controllers
 {
@@ -29,18 +31,15 @@ namespace SMDP.Controllers
 
     public class DataController : ControllerBase
     {
-        private ValidationService _validationService;
-        
+        private ValidationService _validationService;        
         private LogSingleton _logger;
 
         public DataController()
         {
             _validationService = new ValidationService();
             _logger = LogSingleton.Instance;
-       
 
         }
-
         [ProducesResponseType(typeof(List<DailyPrice>), 200)]
         [HttpGet("/DailyPrice")]       
         public dynamic DailyPrice(long a)
@@ -65,8 +64,6 @@ namespace SMDP.Controllers
             }
             else
             {
-                throw new ArgumentException("Violation Exception while accessing the resource.");
-
                 return BadRequest("enter a valid number");
             }
         }
@@ -74,7 +71,8 @@ namespace SMDP.Controllers
         [ProducesResponseType(typeof(List<Fund>), 200)]
         [HttpGet("/Fund")]
         public dynamic Fund()
-        {            
+        {
+           
             string userAgent = Request.Headers["User-Agent"].ToString();
             string method = Request.Method.ToString();
             string userr = User?.Identity.Name;
@@ -129,7 +127,7 @@ namespace SMDP.Controllers
 
             return Instrumentlist;
         }
-
+       
         [ProducesResponseType(typeof(List<LetterType>), 200)]
         [HttpGet("/LetterType")]
         public dynamic LetterType()
@@ -137,16 +135,21 @@ namespace SMDP.Controllers
             string userAgent = Request.Headers["User-Agent"].ToString();
             string method = Request.Method.ToString();
             string userr = User?.Identity.Name;
-            var lettertypeList = _validationService.Lettertype();
-            var json = System.Text.Json.JsonSerializer.Serialize(lettertypeList);
-
+            var letterTypelist = _validationService.Lettertype();
+            var json = System.Text.Json.JsonSerializer.Serialize(letterTypelist);          
 
             _logger.WriteRequest(userAgent);
             _logger.WriteKind(method);
             _logger.GetUser(userr);
-            _logger.WriteResponse(json);
+            _logger.WriteResponse(json); 
 
-            return lettertypeList;
+            var report = new StiReport();       
+            report.Load(path:"D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\Report.mrt");
+            report.RegBusinessObject("LetterType", letterTypelist);
+            var rendered = report.Render(false);            
+            rendered.ExportDocument(StiExportFormat.Pdf, "D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\LetterTypes2.pdf");
+            
+            return letterTypelist;
         }
 
     }

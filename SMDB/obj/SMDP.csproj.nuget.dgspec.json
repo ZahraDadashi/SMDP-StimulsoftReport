@@ -67,6 +67,14 @@
               "target": "Package",
               "version": "[13.0.2, )"
             },
+            "Stimulsoft.Reports.Engine.NetCore": {
+              "target": "Package",
+              "version": "[2022.1.1, )"
+            },
+            "Stimulsoft.Reports.Web.NetCore": {
+              "target": "Package",
+              "version": "[2022.1.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
