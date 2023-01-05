@@ -20,6 +20,8 @@ using Microsoft.Data.SqlClient;
 using System.Data;
 using Stimulsoft.Base;
 using Stimulsoft.Report.Mvc;
+using System.Net;
+using System.Net.Http.Headers;
 
 namespace SMDP.Controllers
 {
@@ -128,7 +130,7 @@ namespace SMDP.Controllers
             return Instrumentlist;
         }
        
-        [ProducesResponseType(typeof(List<LetterType>), 200)]
+        //[ProducesResponseType(typeof(List<LetterType>), 200)]
         [HttpGet("/LetterType")]
         public dynamic LetterType()
         {
@@ -143,14 +145,17 @@ namespace SMDP.Controllers
             _logger.GetUser(userr);
             _logger.WriteResponse(json); 
 
+
             var report = new StiReport();       
-            report.Load(path:"D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\Report.mrt");
-            report.RegBusinessObject("LetterType", letterTypelist);
-            var rendered = report.Render(false);            
-            rendered.ExportDocument(StiExportFormat.Pdf, "D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\LetterTypes2.pdf");
+            report.Load(path:"D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\LetterType.mrt");
+            report.RegBusinessObject("LetterType", letterTypelist);         
             
-            return letterTypelist;
+            var rendered = report.Render(false);
+            MemoryStream memoryStream = new MemoryStream();
+            rendered.ExportDocument(StiExportFormat.Pdf, memoryStream);
+            return File(memoryStream.GetBuffer(), "application/pdf", "LetterType.pdf");
+            //return letterTypelist;
         }
 
-    }
-}
+    }                                                                                                                                                                                                                                      
+} 
