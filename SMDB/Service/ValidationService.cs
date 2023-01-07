@@ -31,23 +31,23 @@ namespace SMDP.Service
             }
 
         }
-        public dynamic DailyPrice(long a)
+        public List<DailyPrice> DailyPrice(long InsCode, int FromDate, int ToDate)
         {
-            return _smdps.DailyPrice(a);
+            return _smdps.DailyPrice(InsCode,FromDate,ToDate);
         }
-        public dynamic Fund()
+        public List<Fund> Fund()
         {
             return _smdps.Fund();
         }
-        public dynamic Industry()
+        public List<Industry> Industry()
         {
             return _smdps.Industry();
         }
-        public dynamic Instrument()
+        public List<Instrument> Instrument()
         {
             return _smdps.Instrument();
         }
-        public dynamic Lettertype()
+        public List<LetterType> Lettertype()
         {
             return _smdps.Lettertype();
         }

@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <Instrument Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>Instrument</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="9">
+          <value>Deven,System.Int32</value>
+          <value>InsCode,System.Int64</value>
+          <value>InstrumentId,System.String</value>
+          <value>CvalMne,System.String</value>
+          <value>Lval18,System.String</value>
+          <value>CsocCsac,System.String</value>
+          <value>Lsoc30,System.String</value>
+          <value>Lval18Afc,System.String</value>
+          <value>Lval30,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>9cac4f46ccad4d0cbda8af12341f6c49</Guid>
+        <Name>Instrument</Name>
+      </Instrument>
+    </BusinessObjects>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>02cb18c7ee104ec9aa8e02af6434b5d3</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <TableInstrument Ref="4" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid>9cac4f46ccad4d0cbda8af12341f6c49</BusinessObjectGuid>
+          <ClientRectangle>0,0.4,19,2.4</ClientRectangle>
+          <ColumnCount>9</ColumnCount>
+          <Components isList="true" count="27">
+            <TableInstrument_Cell1 Ref="5" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>0,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>0</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Deven</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell1>
+            <TableInstrument_Cell2 Ref="6" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>2.2,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>1</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>InsCode</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell2>
+            <TableInstrument_Cell3 Ref="7" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>4.4,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>2</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell3</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>InstrumentId</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell3>
+            <TableInstrument_Cell4 Ref="8" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>6.6,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>3</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell4</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>CvalMne</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell4>
+            <TableInstrument_Cell5 Ref="9" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>8.8,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>4</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell5</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Lval18</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell5>
+            <TableInstrument_Cell6 Ref="10" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>11,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>5</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell6</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>CsocCsac</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell6>
+            <TableInstrument_Cell7 Ref="11" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>13,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>6</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell7</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Lsoc30</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell7>
+            <TableInstrument_Cell8 Ref="12" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>15,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>7</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell8</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Lval18Afc</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell8>
+            <TableInstrument_Cell9 Ref="13" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>17,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <ID>8</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell9</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <Text>Lval30</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell9>
+            <TableInstrument_Cell10 Ref="14" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0.8,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <ID>14</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell10</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>{Instrument.Deven}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell10>
+            <TableInstrument_Cell11 Ref="15" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.2,0.8,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <ID>15</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell11</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>{Instrument.InsCode}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell11>
+            <TableInstrument_Cell12 Ref="16" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.4,0.8,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <ID>16</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell12</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>{Instrument.InstrumentId}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell12>
+            <TableInstrument_Cell13 Ref="17" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.6,0.8,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <ID>17</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell13</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>{Instrument.CvalMne}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell13>
+            <TableInstrument_Cell14 Ref="18" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>8.8,0.8,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <ID>18</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell14</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>{Instrument.Lval18}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell14>
+            <TableInstrument_Cell15 Ref="19" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11,0.8,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <ID>19</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell15</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>{Instrument.CsocCsac}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell15>
+            <TableInstrument_Cell16 Ref="20" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13,0.8,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <ID>20</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell16</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>{Instrument.Lsoc30}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell16>
+            <TableInstrument_Cell17 Ref="21" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>15,0.8,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <ID>21</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell17</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>{Instrument.Lval18Afc}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell17>
+            <TableInstrument_Cell18 Ref="22" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <CanBreak>True</CanBreak>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17,0.8,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <ID>22</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell18</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <ShrinkFontToFit>True</ShrinkFontToFit>
+              <Text>{Instrument.Lval30}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </TableInstrument_Cell18>
+            <TableInstrument_Cell19 Ref="23" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>0,1.6,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>28</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell19</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </TableInstrument_Cell19>
+            <TableInstrument_Cell20 Ref="24" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>2.2,1.6,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>29</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell20</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </TableInstrument_Cell20>
+            <TableInstrument_Cell21 Ref="25" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>4.4,1.6,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>30</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell21</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </TableInstrument_Cell21>
+            <TableInstrument_Cell22 Ref="26" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>6.6,1.6,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>31</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell22</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </TableInstrument_Cell22>
+            <TableInstrument_Cell23 Ref="27" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>8.8,1.6,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>32</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell23</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </TableInstrument_Cell23>
+            <TableInstrument_Cell24 Ref="28" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>11,1.6,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>33</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell24</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </TableInstrument_Cell24>
+            <TableInstrument_Cell25 Ref="29" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>13,1.6,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>34</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell25</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </TableInstrument_Cell25>
+            <TableInstrument_Cell26 Ref="30" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>15,1.6,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>35</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell26</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </TableInstrument_Cell26>
+            <TableInstrument_Cell27 Ref="31" type="TableCell" isKey="true">
+              <Brush>White</Brush>
+              <ClientRectangle>17,1.6,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Expressions isList="true" count="0" />
+              <Font>Arial,9</Font>
+              <ID>36</ID>
+              <JoinCells isList="true" count="0" />
+              <Margins>0,0,0,0</Margins>
+              <Name>TableInstrument_Cell27</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
+              <TextBrush>Black</TextBrush>
+            </TableInstrument_Cell27>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Expressions isList="true" count="0" />
+          <Filters isList="true" count="0" />
+          <FooterRowsCount>1</FooterRowsCount>
+          <HeaderRowsCount>1</HeaderRowsCount>
+          <MinHeight>0.60000000000000009</MinHeight>
+          <Name>TableInstrument</Name>
+          <NumberID>42</NumberID>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+          <RowCount>3</RowCount>
+          <Sort isList="true" count="0" />
+        </TableInstrument>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Expressions isList="true" count="0" />
+      <Guid>698e6f4efb14407c9003a5a7a5c0eb26</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>1/5/2023 12:23:56 PM</ReportChanged>
+  <ReportCreated>1/5/2023 11:03:54 AM</ReportCreated>
+  <ReportFile>D:\vs\SMDBSingleRepoGen\SMDB\Reports\Instrument.mrt</ReportFile>
+  <ReportGuid>24f0e1e106984035aabbb9297bdd8a9b</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2022.1.1.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

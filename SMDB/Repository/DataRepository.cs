@@ -15,9 +15,11 @@ namespace SMDP.Repository
             throw new NotImplementedException();
         }
 
-        public List<DailyPrice> DailyPrice(long a)
+        public List<DailyPrice> DailyPrice(long InsCode,int FromDate, int ToDate)
         {
-            var dailypricelist = _db.DailyPrices.ToList();
+            var dailypricelist = _db.DailyPrices.Where(i =>
+              i.InsCode == InsCode && i.Deven>=FromDate && i.Deven<=ToDate)
+              .ToList();
             return dailypricelist;
         }
         
