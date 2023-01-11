@@ -35,103 +35,12 @@
     <Page1 Ref="3" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="3">
-        <Chart2 Ref="4" type="Stimulsoft.Report.Chart.StiChart" isKey="true">
-          <Area Ref="5" type="Stimulsoft.Report.Chart.StiClusteredColumnArea" isKey="true">
-            <BorderColor>Transparent</BorderColor>
-            <Brush>[255:255:255]</Brush>
-            <Chart isRef="4" />
-            <GridLinesHorRight Ref="6" type="Stimulsoft.Report.Chart.StiGridLinesHor" isKey="true">
-              <Area isRef="5" />
-              <Color>Silver</Color>
-              <MinorColor>Gainsboro</MinorColor>
-              <Visible>False</Visible>
-            </GridLinesHorRight>
-            <YAxis Ref="7" type="Stimulsoft.Report.Chart.StiYLeftAxis" isKey="true">
-              <Area isRef="5" />
-              <LineColor>140, 140, 140</LineColor>
-              <Title Ref="8" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
-                <Color>140, 140, 140</Color>
-                <Direction>BottomToTop</Direction>
-                <Font>Tahoma,12,Bold</Font>
-              </Title>
-            </YAxis>
-            <YRightAxis Ref="9" type="Stimulsoft.Report.Chart.StiYRightAxis" isKey="true">
-              <Area isRef="5" />
-              <Labels Ref="10" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
-                <Color>140, 140, 140</Color>
-                <Font>Tahoma,8</Font>
-                <TextAlignment>Left</TextAlignment>
-              </Labels>
-              <LineColor>140, 140, 140</LineColor>
-              <Title Ref="11" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
-                <Color>140, 140, 140</Color>
-                <Direction>TopToBottom</Direction>
-                <Font>Tahoma,12,Bold</Font>
-              </Title>
-            </YRightAxis>
-          </Area>
-          <Brush>[255:255:255]</Brush>
-          <BusinessObjectGuid>bd2fba35a5f44ec3b5677e33991454b9</BusinessObjectGuid>
-          <ClientRectangle>0.2,20.4,18.6,6.8</ClientRectangle>
-          <Conditions isList="true" count="0" />
-          <ConstantLines isList="true" count="0" />
-          <CustomStyleName />
-          <DataSourceName isNull="true" />
-          <Expressions isList="true" count="0" />
-          <Filters isList="true" count="0" />
-          <Name>Chart2</Name>
-          <Page isRef="3" />
-          <Parent isRef="3" />
-          <Series isList="true" count="1">
-            <Item4 Ref="12" type="Stimulsoft.Report.Chart.StiClusteredColumnSeries" isKey="true">
-              <ArgumentDataColumn>LetterType.LetterGroupId</ArgumentDataColumn>
-              <BorderColor>Transparent</BorderColor>
-              <BorderThickness>1</BorderThickness>
-              <Brush>[52:152:219]</Brush>
-              <BrushNegative>Firebrick</BrushNegative>
-              <Chart isRef="4" />
-              <Conditions isList="true" count="0" />
-              <Filters isList="true" count="0" />
-              <SeriesLabels Ref="13" type="Stimulsoft.Report.Chart.StiCenterAxisLabels" isKey="true">
-                <BorderColor>Transparent</BorderColor>
-                <Brush>[119:255:255:255]</Brush>
-                <Chart isRef="4" />
-                <Font>Arial,10</Font>
-                <LabelColor>50, 58, 69</LabelColor>
-                <MarkerSize>8, 6</MarkerSize>
-                <ValueTypeSeparator>-</ValueTypeSeparator>
-                <Width>0</Width>
-              </SeriesLabels>
-              <ShowShadow>False</ShowShadow>
-              <Title>Series 1</Title>
-              <TrendLines isList="true" count="0" />
-              <ValueDataColumn>LetterType.PublisherTypeId</ValueDataColumn>
-            </Item4>
-          </Series>
-          <SeriesLabels Ref="14" type="Stimulsoft.Report.Chart.StiCenterAxisLabels" isKey="true">
-            <BorderColor>Transparent</BorderColor>
-            <Brush>[119:255:255:255]</Brush>
-            <Chart isRef="4" />
-            <Font>Arial,10</Font>
-            <LabelColor>50, 58, 69</LabelColor>
-            <MarkerSize>8, 6</MarkerSize>
-            <ValueTypeSeparator>-</ValueTypeSeparator>
-            <Width>0</Width>
-          </SeriesLabels>
-          <SeriesLabelsConditions isList="true" count="0" />
-          <Sort isList="true" count="0" />
-          <Strips isList="true" count="0" />
-          <Style Ref="15" type="Stimulsoft.Report.Chart.StiStyle29" isKey="true">
-            <Conditions isList="true" count="0" />
-            <Name />
-          </Style>
-        </Chart2>
-        <Header Ref="16" type="HeaderBand" isKey="true">
+      <Components isList="true" count="2">
+        <Header Ref="4" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,19,0.8</ClientRectangle>
           <Components isList="true" count="6">
-            <HeaderLetterType_Id Ref="17" type="Text" isKey="true">
+            <HeaderLetterType_Id Ref="5" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,2.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -141,13 +50,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderLetterType_Id</Name>
               <Page isRef="3" />
-              <Parent isRef="16" />
+              <Parent isRef="4" />
               <Text>Id</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </HeaderLetterType_Id>
-            <HeaderLetterType_LetterTypeId Ref="18" type="Text" isKey="true">
+            <HeaderLetterType_LetterTypeId Ref="6" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>2.2,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -157,13 +66,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderLetterType_LetterTypeId</Name>
               <Page isRef="3" />
-              <Parent isRef="16" />
+              <Parent isRef="4" />
               <Text>LetterTypeId</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </HeaderLetterType_LetterTypeId>
-            <HeaderLetterType_Code Ref="19" type="Text" isKey="true">
+            <HeaderLetterType_Code Ref="7" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>4.6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -173,13 +82,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderLetterType_Code</Name>
               <Page isRef="3" />
-              <Parent isRef="16" />
+              <Parent isRef="4" />
               <Text>Code</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </HeaderLetterType_Code>
-            <HeaderLetterType_Name Ref="20" type="Text" isKey="true">
+            <HeaderLetterType_Name Ref="8" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>6.2,0,7.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -189,13 +98,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderLetterType_Name</Name>
               <Page isRef="3" />
-              <Parent isRef="16" />
+              <Parent isRef="4" />
               <Text>Name</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </HeaderLetterType_Name>
-            <HeaderLetterType_PublisherTypeId Ref="21" type="Text" isKey="true">
+            <HeaderLetterType_PublisherTypeId Ref="9" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>13.4,0,3,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -205,13 +114,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderLetterType_PublisherTypeId</Name>
               <Page isRef="3" />
-              <Parent isRef="16" />
+              <Parent isRef="4" />
               <Text>PublisherTypeId</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </HeaderLetterType_PublisherTypeId>
-            <HeaderLetterType_LetterGroupId Ref="22" type="Text" isKey="true">
+            <HeaderLetterType_LetterGroupId Ref="10" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>16.4,0,2.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -221,7 +130,7 @@
               <Margins>0,0,0,0</Margins>
               <Name>HeaderLetterType_LetterGroupId</Name>
               <Page isRef="3" />
-              <Parent isRef="16" />
+              <Parent isRef="4" />
               <Text>LetterGroupId</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -234,13 +143,13 @@
           <Page isRef="3" />
           <Parent isRef="3" />
         </Header>
-        <TableLetterType Ref="23" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+        <TableLetterType Ref="11" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid>bd2fba35a5f44ec3b5677e33991454b9</BusinessObjectGuid>
           <ClientRectangle>0,2,19,0.8</ClientRectangle>
           <ColumnCount>6</ColumnCount>
           <Components isList="true" count="6">
-            <TableLetterType_Cell1 Ref="24" type="TableCell" isKey="true">
+            <TableLetterType_Cell1 Ref="12" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>0,0,2.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -253,13 +162,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>TableLetterType_Cell1</Name>
               <Page isRef="3" />
-              <Parent isRef="23" />
+              <Parent isRef="11" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <Text>{LetterType.Id}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableLetterType_Cell1>
-            <TableLetterType_Cell2 Ref="25" type="TableCell" isKey="true">
+            <TableLetterType_Cell2 Ref="13" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>2.2,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -272,13 +181,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>TableLetterType_Cell2</Name>
               <Page isRef="3" />
-              <Parent isRef="23" />
+              <Parent isRef="11" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <Text>{LetterType.LetterTypeId}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableLetterType_Cell2>
-            <TableLetterType_Cell3 Ref="26" type="TableCell" isKey="true">
+            <TableLetterType_Cell3 Ref="14" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>4.6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -291,13 +200,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>TableLetterType_Cell3</Name>
               <Page isRef="3" />
-              <Parent isRef="23" />
+              <Parent isRef="11" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <Text>{LetterType.Code}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableLetterType_Cell3>
-            <TableLetterType_Cell4 Ref="27" type="TableCell" isKey="true">
+            <TableLetterType_Cell4 Ref="15" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <CanShrink>True</CanShrink>
@@ -312,14 +221,14 @@
               <Margins>0,0,0,0</Margins>
               <Name>TableLetterType_Cell4</Name>
               <Page isRef="3" />
-              <Parent isRef="23" />
+              <Parent isRef="11" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>{LetterType.Name}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableLetterType_Cell4>
-            <TableLetterType_Cell5 Ref="28" type="TableCell" isKey="true">
+            <TableLetterType_Cell5 Ref="16" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>13.4,0,3,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -332,13 +241,13 @@
               <Margins>0,0,0,0</Margins>
               <Name>TableLetterType_Cell5</Name>
               <Page isRef="3" />
-              <Parent isRef="23" />
+              <Parent isRef="11" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <Text>{LetterType.PublisherTypeId}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableLetterType_Cell5>
-            <TableLetterType_Cell6 Ref="29" type="TableCell" isKey="true">
+            <TableLetterType_Cell6 Ref="17" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <ClientRectangle>16.4,0,2.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -351,7 +260,7 @@
               <Margins>0,0,0,0</Margins>
               <Name>TableLetterType_Cell6</Name>
               <Page isRef="3" />
-              <Parent isRef="23" />
+              <Parent isRef="11" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <Text>{LetterType.LetterGroupId}</Text>
               <TextBrush>Black</TextBrush>
@@ -392,10 +301,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/5/2023 10:37:29 AM</ReportChanged>
+  <ReportChanged>1/11/2023 9:59:32 AM</ReportChanged>
   <ReportCreated>1/2/2023 10:03:09 AM</ReportCreated>
   <ReportFile>D:\vs\SMDBSingleRepoGen\SMDB\Reports\letterType.mrt</ReportFile>
-  <ReportGuid>d35f5bd2e9bb4077a9c9cdb615be7756</ReportGuid>
+  <ReportGuid>d30e13b1c11c46f19a5d30a919b2fe43</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2022.1.1.0</ReportVersion>

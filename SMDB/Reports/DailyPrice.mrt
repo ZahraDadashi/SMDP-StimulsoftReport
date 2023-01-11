@@ -25,15 +25,15 @@
         <Alias>DailyPrice</Alias>
         <Key />
         <Name>DailyPrice</Name>
-        <PathData>D:\vs\SMDBSingleRepoGen\SMDB\Reports\DailyPrice.xml</PathData>
+        <PathData>C:\Debug\Reports\DailyPrice.xml</PathData>
         <PathSchema />
         <XmlType>Xml</XmlType>
       </DailyPrice>
     </Databases>
-    <DataSources isList="true" count="1">
+    <DataSources isList="true" count="2">
       <ArrayOfDailyPrice_DailyPrice Ref="4" type="DataTableSource" isKey="true">
         <Alias>ArrayOfDailyPrice_DailyPrice</Alias>
-        <Columns isList="true" count="15">
+        <Columns isList="true" count="16">
           <value>Id,System.String</value>
           <value>InsCode,System.String</value>
           <value>Deven,System.String</value>
@@ -49,14 +49,42 @@
           <value>RegDate,System.String</value>
           <value>RegTime,System.String</value>
           <value>relationId,System.String</value>
+          <value>Shamsidate,System.String</value>
         </Columns>
         <Dictionary isRef="1" />
         <Key>d25254a083b64658991d9214fd556aae</Key>
         <Name>ArrayOfDailyPrice_DailyPrice</Name>
         <NameInSource>DailyPrice.ArrayOfDailyPrice_DailyPrice</NameInSource>
       </ArrayOfDailyPrice_DailyPrice>
+      <ArrayOfDailyPrice Ref="5" type="DataTableSource" isKey="true">
+        <Alias>ArrayOfDailyPrice</Alias>
+        <Columns isList="true" count="3">
+          <value>_x0040_xmlns:xsi,System.String</value>
+          <value>_x0040_xmlns:xsd,System.String</value>
+          <value>DailyPrice,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>bb7ef72012434fa196a26602f64cf4ab</Key>
+        <Name>ArrayOfDailyPrice</Name>
+        <NameInSource>DailyPrice.ArrayOfDailyPrice</NameInSource>
+      </ArrayOfDailyPrice>
     </DataSources>
-    <Relations isList="true" count="0" />
+    <Relations isList="true" count="1">
+      <ArrayOfDailyPrice Ref="6" type="DataRelation" isKey="true">
+        <Alias>ArrayOfDailyPrice</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>relationId</value>
+        </ChildColumns>
+        <ChildSource isRef="4" />
+        <Dictionary isRef="1" />
+        <Name>ArrayOfDailyPrice</Name>
+        <NameInSource>ArrayOfDailyPrice_DailyPrice</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>DailyPrice</value>
+        </ParentColumns>
+        <ParentSource isRef="5" />
+      </ArrayOfDailyPrice>
+    </Relations>
     <Report isRef="0" />
     <Resources isList="true" count="0" />
     <Variables isList="true" count="0" />
@@ -66,17 +94,17 @@
   <Key>277b635af771424eaf27316d289cc783</Key>
   <MetaTags isList="true" count="0" />
   <Pages isList="true" count="2">
-    <Page1 Ref="5" type="Page" isKey="true">
+    <Page1 Ref="7" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <Components isList="true" count="1">
-        <TableDailyPrice2 Ref="6" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
+        <TableDailyPrice2 Ref="8" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid>8ee64e156c7b49be83a218ea73753936</BusinessObjectGuid>
           <ClientRectangle>0,0.4,19,1.6</ClientRectangle>
           <ColumnCount>6</ColumnCount>
           <Components isList="true" count="12">
-            <TableDailyPrice2_Cell1 Ref="7" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell1 Ref="9" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0,3.2,0.8</ClientRectangle>
@@ -89,15 +117,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell1</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>Id</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell1>
-            <TableDailyPrice2_Cell2 Ref="8" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell2 Ref="10" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>3.2,0,3.2,0.8</ClientRectangle>
@@ -110,15 +138,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell2</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>InsCode</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell2>
-            <TableDailyPrice2_Cell3 Ref="9" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell3 Ref="11" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.4,0,3.2,0.8</ClientRectangle>
@@ -131,15 +159,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell3</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>Deven</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell3>
-            <TableDailyPrice2_Cell4 Ref="10" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell4 Ref="12" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>9.6,0,3.2,0.8</ClientRectangle>
@@ -152,15 +180,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell4</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>Pclosing</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell4>
-            <TableDailyPrice2_Cell5 Ref="11" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell5 Ref="13" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>12.8,0,3.2,0.8</ClientRectangle>
@@ -173,15 +201,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell5</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>PdrCotVal</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell5>
-            <TableDailyPrice2_Cell6 Ref="12" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell6 Ref="14" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>16,0,3,0.8</ClientRectangle>
@@ -194,15 +222,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell6</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>ZtotTran</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell6>
-            <TableDailyPrice2_Cell7 Ref="13" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell7 Ref="15" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0.8,3.2,0.8</ClientRectangle>
@@ -215,15 +243,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell7</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>{DailyPrice.Id}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell7>
-            <TableDailyPrice2_Cell8 Ref="14" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell8 Ref="16" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>3.2,0.8,3.2,0.8</ClientRectangle>
@@ -236,15 +264,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell8</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>{DailyPrice.InsCode}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell8>
-            <TableDailyPrice2_Cell9 Ref="15" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell9 Ref="17" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.4,0.8,3.2,0.8</ClientRectangle>
@@ -257,15 +285,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell9</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>{DailyPrice.Deven}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell9>
-            <TableDailyPrice2_Cell10 Ref="16" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell10 Ref="18" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>9.6,0.8,3.2,0.8</ClientRectangle>
@@ -278,15 +306,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell10</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>{DailyPrice.Pclosing}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell10>
-            <TableDailyPrice2_Cell11 Ref="17" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell11 Ref="19" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>12.8,0.8,3.2,0.8</ClientRectangle>
@@ -299,15 +327,15 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell11</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>{DailyPrice.PdrCotVal}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </TableDailyPrice2_Cell11>
-            <TableDailyPrice2_Cell12 Ref="18" type="TableCell" isKey="true">
+            <TableDailyPrice2_Cell12 Ref="20" type="TableCell" isKey="true">
               <Brush>White</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>16,0.8,3,0.8</ClientRectangle>
@@ -320,8 +348,8 @@
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
               <Name>TableDailyPrice2_Cell12</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
+              <Page isRef="7" />
+              <Parent isRef="8" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
               <ShrinkFontToFit>True</ShrinkFontToFit>
               <Text>{DailyPrice.ZtotTran}</Text>
@@ -337,8 +365,8 @@
           <MinHeight>0.4</MinHeight>
           <Name>TableDailyPrice2</Name>
           <NumberID>12</NumberID>
-          <Page isRef="5" />
-          <Parent isRef="5" />
+          <Page isRef="7" />
+          <Parent isRef="7" />
           <RowCount>2</RowCount>
           <Sort isList="true" count="0" />
         </TableDailyPrice2>
@@ -352,48 +380,48 @@
       <PageWidth>21</PageWidth>
       <Report isRef="0" />
     </Page1>
-    <Page2 Ref="19" type="Page" isKey="true">
+    <Page2 Ref="21" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <Components isList="true" count="1">
-        <Chart1 Ref="20" type="Stimulsoft.Report.Chart.StiChart" isKey="true">
-          <Area Ref="21" type="Stimulsoft.Report.Chart.StiClusteredColumnArea" isKey="true">
+        <Chart1 Ref="22" type="Stimulsoft.Report.Chart.StiChart" isKey="true">
+          <Area Ref="23" type="Stimulsoft.Report.Chart.StiClusteredColumnArea" isKey="true">
             <BorderColor>Transparent</BorderColor>
             <Brush>[255:255:255]</Brush>
-            <Chart isRef="20" />
-            <GridLinesHorRight Ref="22" type="Stimulsoft.Report.Chart.StiGridLinesHor" isKey="true">
-              <Area isRef="21" />
+            <Chart isRef="22" />
+            <GridLinesHorRight Ref="24" type="Stimulsoft.Report.Chart.StiGridLinesHor" isKey="true">
+              <Area isRef="23" />
               <Color>Silver</Color>
               <MinorColor>Gainsboro</MinorColor>
               <Visible>False</Visible>
             </GridLinesHorRight>
-            <XAxis Ref="23" type="Stimulsoft.Report.Chart.StiXBottomAxis" isKey="true">
-              <Area isRef="21" />
-              <Labels Ref="24" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
+            <XAxis Ref="25" type="Stimulsoft.Report.Chart.StiXBottomAxis" isKey="true">
+              <Area isRef="23" />
+              <Labels Ref="26" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
                 <Angle>45</Angle>
                 <Color>140, 140, 140</Color>
                 <Font>Tahoma,8</Font>
               </Labels>
               <LineColor>140, 140, 140</LineColor>
             </XAxis>
-            <YAxis Ref="25" type="Stimulsoft.Report.Chart.StiYLeftAxis" isKey="true">
-              <Area isRef="21" />
+            <YAxis Ref="27" type="Stimulsoft.Report.Chart.StiYLeftAxis" isKey="true">
+              <Area isRef="23" />
               <LineColor>140, 140, 140</LineColor>
-              <Title Ref="26" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
+              <Title Ref="28" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
                 <Color>140, 140, 140</Color>
                 <Direction>BottomToTop</Direction>
                 <Font>Tahoma,12,Bold</Font>
               </Title>
             </YAxis>
-            <YRightAxis Ref="27" type="Stimulsoft.Report.Chart.StiYRightAxis" isKey="true">
-              <Area isRef="21" />
-              <Labels Ref="28" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
+            <YRightAxis Ref="29" type="Stimulsoft.Report.Chart.StiYRightAxis" isKey="true">
+              <Area isRef="23" />
+              <Labels Ref="30" type="Stimulsoft.Report.Chart.StiAxisLabels" isKey="true">
                 <Color>140, 140, 140</Color>
                 <Font>Tahoma,8</Font>
                 <TextAlignment>Left</TextAlignment>
               </Labels>
               <LineColor>140, 140, 140</LineColor>
-              <Title Ref="29" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
+              <Title Ref="31" type="Stimulsoft.Report.Chart.StiAxisTitle" isKey="true">
                 <Color>140, 140, 140</Color>
                 <Direction>TopToBottom</Direction>
                 <Font>Tahoma,12,Bold</Font>
@@ -407,10 +435,10 @@
           <CustomStyleName />
           <Expressions isList="true" count="0" />
           <Filters isList="true" count="0" />
-          <Legend Ref="30" type="Stimulsoft.Report.Chart.StiLegend" isKey="true">
+          <Legend Ref="32" type="Stimulsoft.Report.Chart.StiLegend" isKey="true">
             <BorderColor>Transparent</BorderColor>
             <Brush>[255:255:255]</Brush>
-            <Chart isRef="20" />
+            <Chart isRef="22" />
             <Font>Arial,8</Font>
             <HorAlignment>Right</HorAlignment>
             <LabelsColor>140, 140, 140</LabelsColor>
@@ -420,30 +448,30 @@
             <TitleFont>Arial,14,Bold</TitleFont>
           </Legend>
           <Name>Chart1</Name>
-          <Page isRef="19" />
-          <Parent isRef="19" />
+          <Page isRef="21" />
+          <Parent isRef="21" />
           <Series isList="true" count="1">
-            <Item20 Ref="31" type="Stimulsoft.Report.Chart.StiLineSeries" isKey="true">
-              <ArgumentDataColumn>ArrayOfDailyPrice_DailyPrice.Deven</ArgumentDataColumn>
-              <Chart isRef="20" />
+            <Item22 Ref="33" type="Stimulsoft.Report.Chart.StiLineSeries" isKey="true">
+              <ArgumentDataColumn>ArrayOfDailyPrice_DailyPrice.Shamsidate</ArgumentDataColumn>
+              <Chart isRef="22" />
               <Conditions isList="true" count="0" />
               <Filters isList="true" count="0" />
               <Lighting>False</Lighting>
               <LineColor>52, 152, 219</LineColor>
               <LineColorNegative>Firebrick</LineColorNegative>
-              <LineMarker Ref="32" type="Stimulsoft.Report.Chart.StiLineMarker" isKey="true">
+              <LineMarker Ref="34" type="Stimulsoft.Report.Chart.StiLineMarker" isKey="true">
                 <BorderColor>0, 2, 69</BorderColor>
                 <Brush>[102:202:255]</Brush>
               </LineMarker>
-              <Marker Ref="33" type="Stimulsoft.Report.Chart.StiMarker" isKey="true">
+              <Marker Ref="35" type="Stimulsoft.Report.Chart.StiMarker" isKey="true">
                 <BorderColor>0, 52, 119</BorderColor>
                 <Brush>[152:252:255]</Brush>
                 <Visible>False</Visible>
               </Marker>
-              <SeriesLabels Ref="34" type="Stimulsoft.Report.Chart.StiInsideBaseAxisLabels" isKey="true">
+              <SeriesLabels Ref="36" type="Stimulsoft.Report.Chart.StiInsideBaseAxisLabels" isKey="true">
                 <BorderColor>Transparent</BorderColor>
                 <Brush>[119:255:255:255]</Brush>
-                <Chart isRef="20" />
+                <Chart isRef="22" />
                 <Font>Arial,10</Font>
                 <LabelColor>50, 58, 69</LabelColor>
                 <MarkerSize>0, 0</MarkerSize>
@@ -455,10 +483,10 @@
               <Title>DailyPrice</Title>
               <TrendLines isList="true" count="0" />
               <ValueDataColumn>ArrayOfDailyPrice_DailyPrice.PdrCotVal</ValueDataColumn>
-            </Item20>
+            </Item22>
           </Series>
-          <SeriesLabels Ref="35" type="Stimulsoft.Report.Chart.StiNoneLabels" isKey="true">
-            <Chart isRef="20" />
+          <SeriesLabels Ref="37" type="Stimulsoft.Report.Chart.StiNoneLabels" isKey="true">
+            <Chart isRef="22" />
             <MarkerAlignment>Right</MarkerAlignment>
             <MarkerSize>0, 0</MarkerSize>
             <ValueTypeSeparator>-</ValueTypeSeparator>
@@ -467,7 +495,7 @@
           <SeriesLabelsConditions isList="true" count="0" />
           <Sort isList="true" count="0" />
           <Strips isList="true" count="0" />
-          <Style Ref="36" type="Stimulsoft.Report.Chart.StiStyle29" isKey="true">
+          <Style Ref="38" type="Stimulsoft.Report.Chart.StiStyle29" isKey="true">
             <Conditions isList="true" count="0" />
             <Name />
           </Style>
@@ -494,10 +522,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/7/2023 3:20:12 PM</ReportChanged>
+  <ReportChanged>1/11/2023 12:09:54 PM</ReportChanged>
   <ReportCreated>1/5/2023 12:32:47 PM</ReportCreated>
   <ReportFile>D:\vs\SMDBSingleRepoGen\SMDB\Reports\DailyPrice.mrt</ReportFile>
-  <ReportGuid>1dec1cb6df9a4038b5532b5d7f334d0b</ReportGuid>
+  <ReportGuid>04dfe6d62156425189a3fe69e0f203d9</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2022.1.1.0</ReportVersion>

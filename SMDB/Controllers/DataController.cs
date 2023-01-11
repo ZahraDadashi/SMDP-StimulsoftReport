@@ -63,20 +63,20 @@ namespace SMDP.Controllers
                 _logger.WriteResponse(json);
 
                 System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(List<DailyPrice>));                
-                var path = Path.Combine("D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\DailyPrice.xml");
+                var path = Path.Combine(".\\Reports\\DailyPrice.xml");
                 System.IO.FileStream fileObj;
                 fileObj = System.IO.File.Create(path);
                 writer.Serialize(fileObj, Dailypricelist);
                 fileObj.Close();
-            
+
                 var report = new StiReport();
-                report.Load(path: "D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\DailyPrice.mrt");
+                report.Load(path: ".\\Reports\\DailyPrice.mrt");
                 report.RegBusinessObject("DailyPrice", Dailypricelist);
                 var rendered = report.Render(false);
                 MemoryStream memoryStream = new MemoryStream();
                 rendered.ExportDocument(StiExportFormat.Pdf, memoryStream);
                 return File(memoryStream.GetBuffer(), "application/pdf", "DailyPrice.pdf");
-
+                return Dailypricelist;
             }
             else
             {
@@ -101,7 +101,7 @@ namespace SMDP.Controllers
             _logger.GetUser(userr);
             _logger.WriteResponse(json);
             var report = new StiReport();
-            report.Load(path: "D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\Fund.mrt");
+            report.Load(path: ".\\Reports\\Fund.mrt");
             report.RegBusinessObject("Fund", Fundlist);
             var rendered = report.Render(false);
             MemoryStream memoryStream = new MemoryStream();
@@ -127,7 +127,7 @@ namespace SMDP.Controllers
             _logger.GetUser(userr);
             _logger.WriteResponse(json);
             var report = new StiReport();
-            report.Load(path: "D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\Industry.mrt");
+            report.Load(path: ".\\Reports\\Industry.mrt");
             report.RegBusinessObject("Industry", Industrylist);
             var rendered = report.Render(false);
             MemoryStream memoryStream = new MemoryStream();
@@ -152,7 +152,7 @@ namespace SMDP.Controllers
             _logger.GetUser(userr);
             _logger.WriteResponse(json);
             var report = new StiReport();
-            report.Load(path: "D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\Instrument.mrt");
+            report.Load(path: ".\\Reports\\Instrument.mrt");
             report.RegBusinessObject("Instrument", Instrumentlist);
             var rendered = report.Render(false);
             MemoryStream memoryStream = new MemoryStream();
@@ -178,7 +178,7 @@ namespace SMDP.Controllers
             _logger.WriteResponse(json);        
 
             var report = new StiReport();
-            report.Load(path: "D:\\vs\\SMDBSingleRepoGen\\SMDB\\Reports\\LetterType.mrt");
+            report.Load(path: ".\\Reports\\LetterType.mrt");
             report.RegBusinessObject("LetterType", letterTypelist);
             var rendered = report.Render(false);
             MemoryStream memoryStream = new MemoryStream();
