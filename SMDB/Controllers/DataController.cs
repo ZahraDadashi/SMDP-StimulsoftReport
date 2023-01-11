@@ -42,7 +42,8 @@ namespace SMDP.Controllers
             _logger = LogSingleton.Instance;            
 
         }
-        //[ProducesResponseType(typeof(List<DailyPrice>), 200)]
+
+        [ProducesResponseType(typeof(List<DailyPrice>), 200)]
         [HttpGet("/DailyPrice")]       
         public dynamic DailyPrice(long InsCode, int FromDate, int ToDate)
          {
@@ -62,20 +63,7 @@ namespace SMDP.Controllers
                 _logger.GetUser(userr);
                 _logger.WriteResponse(json);
 
-                System.Xml.Serialization.XmlSerializer writer = new System.Xml.Serialization.XmlSerializer(typeof(List<DailyPrice>));                
-                var path = Path.Combine(".\\Reports\\DailyPrice.xml");
-                System.IO.FileStream fileObj;
-                fileObj = System.IO.File.Create(path);
-                writer.Serialize(fileObj, Dailypricelist);
-                fileObj.Close();
-
-                var report = new StiReport();
-                report.Load(path: ".\\Reports\\DailyPrice.mrt");
-                report.RegBusinessObject("DailyPrice", Dailypricelist);
-                var rendered = report.Render(false);
-                MemoryStream memoryStream = new MemoryStream();
-                rendered.ExportDocument(StiExportFormat.Pdf, memoryStream);
-                return File(memoryStream.GetBuffer(), "application/pdf", "DailyPrice.pdf");
+                
                 return Dailypricelist;
             }
             else
@@ -84,7 +72,7 @@ namespace SMDP.Controllers
             }
         }
 
-        //[ProducesResponseType(typeof(List<Fund>), 200)]
+        [ProducesResponseType(typeof(List<Fund>), 200)]
         [HttpGet("/Fund")]
         public dynamic Fund()
         {
@@ -100,17 +88,12 @@ namespace SMDP.Controllers
             _logger.WriteKind(method);
             _logger.GetUser(userr);
             _logger.WriteResponse(json);
-            var report = new StiReport();
-            report.Load(path: ".\\Reports\\Fund.mrt");
-            report.RegBusinessObject("Fund", Fundlist);
-            var rendered = report.Render(false);
-            MemoryStream memoryStream = new MemoryStream();
-            var result = rendered.ExportDocument(StiExportFormat.Pdf, memoryStream);
-            return File(memoryStream.GetBuffer(), "application/pdf", "Fund.pdf");           
+           
+            return Fundlist;
 
         }
       
-        //[ProducesResponseType(typeof(List<Industry>), 200)]
+        [ProducesResponseType(typeof(List<Industry>), 200)]
         [HttpGet("/Industry")]    
         
         public dynamic Industry()
@@ -126,17 +109,12 @@ namespace SMDP.Controllers
             _logger.WriteKind(method);
             _logger.GetUser(userr);
             _logger.WriteResponse(json);
-            var report = new StiReport();
-            report.Load(path: ".\\Reports\\Industry.mrt");
-            report.RegBusinessObject("Industry", Industrylist);
-            var rendered = report.Render(false);
-            MemoryStream memoryStream = new MemoryStream();
-            rendered.ExportDocument(StiExportFormat.Pdf, memoryStream);
-            return File(memoryStream.GetBuffer(), "application/pdf", "Industry.pdf");
+           
+            return Industrylist;
                    
         }
 
-        //[ProducesResponseType(typeof(List<Instrument>), 200)]
+        [ProducesResponseType(typeof(List<Instrument>), 200)]
         [HttpGet("/Instrument")]        
         public dynamic Instrument()
         {
@@ -151,18 +129,13 @@ namespace SMDP.Controllers
             _logger.WriteKind(method);
             _logger.GetUser(userr);
             _logger.WriteResponse(json);
-            var report = new StiReport();
-            report.Load(path: ".\\Reports\\Instrument.mrt");
-            report.RegBusinessObject("Instrument", Instrumentlist);
-            var rendered = report.Render(false);
-            MemoryStream memoryStream = new MemoryStream();
-            rendered.ExportDocument(StiExportFormat.Pdf, memoryStream);
-            return File(memoryStream.GetBuffer(), "application/pdf", "Instrument.pdf");
+           
+            return Instrumentlist;
             
         
         }
        
-        //[ProducesResponseType(typeof(List<LetterType>), 200)]
+        [ProducesResponseType(typeof(List<LetterType>), 200)]
         [HttpGet("/LetterType")]
         public dynamic LetterType()
         {
@@ -175,15 +148,9 @@ namespace SMDP.Controllers
             _logger.WriteRequest(userAgent);
             _logger.WriteKind(method);
             _logger.GetUser(userr);
-            _logger.WriteResponse(json);        
+            _logger.WriteResponse(json);
 
-            var report = new StiReport();
-            report.Load(path: ".\\Reports\\LetterType.mrt");
-            report.RegBusinessObject("LetterType", letterTypelist);
-            var rendered = report.Render(false);
-            MemoryStream memoryStream = new MemoryStream();
-            rendered.ExportDocument(StiExportFormat.Pdf, memoryStream);
-            return File(memoryStream.GetBuffer(), "application/pdf", "LetterType.pdf");
+            return letterTypelist;
                 
         }
 

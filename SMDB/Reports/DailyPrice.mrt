@@ -522,10 +522,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/11/2023 12:09:54 PM</ReportChanged>
+  <ReportChanged>1/11/2023 4:23:51 PM</ReportChanged>
   <ReportCreated>1/5/2023 12:32:47 PM</ReportCreated>
   <ReportFile>D:\vs\SMDBSingleRepoGen\SMDB\Reports\DailyPrice.mrt</ReportFile>
-  <ReportGuid>04dfe6d62156425189a3fe69e0f203d9</ReportGuid>
+  <ReportGuid>7827b0eb7e7f41dd9313e96c9620cbd4</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2022.1.1.0</ReportVersion>
