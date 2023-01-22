@@ -45,7 +45,7 @@ namespace SMDP.Controllers
 
         [ProducesResponseType(typeof(List<DailyPrice>), 200)]
         [HttpGet("/DailyPrice")]       
-        public dynamic DailyPrice(long InsCode, int FromDate, int ToDate)
+        public dynamic DailyPrice(long InsCode, DateTime FromD, DateTime ToD)
          {
             bool validate = _validationService.validateDailyPrice(InsCode);
             if(validate)
@@ -54,7 +54,7 @@ namespace SMDP.Controllers
                 string userAgent = Request.Headers["User-Agent"].ToString();
                 string method = Request.Method.ToString();
                 string userr = User?.Identity.Name;
-                var Dailypricelist = _validationService.DailyPrice(InsCode,FromDate,ToDate);
+                var Dailypricelist = _validationService.DailyPrice(InsCode,FromD,ToD);
                 var json = System.Text.Json.JsonSerializer.Serialize(Dailypricelist);
 
 

@@ -43,7 +43,7 @@ namespace SMDP.Controllers
 
             }
             [HttpGet("/DailyPrice/Report")]
-            public dynamic DailyPrice(long InsCode, int FromDate, int ToDate)
+            public dynamic DailyPrice(long InsCode, DateTime FromD, DateTime ToD)
             {
                 bool validate = _validationService.validateDailyPrice(InsCode);
                 if (validate)
@@ -52,7 +52,7 @@ namespace SMDP.Controllers
                     string userAgent = Request.Headers["User-Agent"].ToString();
                     string method = Request.Method.ToString();
                     string userr = User?.Identity.Name;
-                    var Dailypricelist = _validationService.DailyPrice(InsCode, FromDate, ToDate);
+                    var Dailypricelist = _validationService.DailyPrice(InsCode, FromD, ToD);
                     var json = System.Text.Json.JsonSerializer.Serialize(Dailypricelist);
 
 
@@ -75,7 +75,7 @@ namespace SMDP.Controllers
                     MemoryStream memoryStream = new MemoryStream();
                     rendered.ExportDocument(StiExportFormat.Pdf, memoryStream);
                     return File(memoryStream.GetBuffer(), "application/pdf", "DailyPrice.pdf");
-                    return Dailypricelist;
+                   
                 }
                 else
                 {

@@ -1,5 +1,6 @@
 ﻿using SMDP.SMDPModels;
 using SMDP.Controllers;
+using SMDP;
 namespace SMDP.Repository
 {
     public class DataRepository : IDataRepository
@@ -15,10 +16,14 @@ namespace SMDP.Repository
             throw new NotImplementedException();
         }
 
-        public List<DailyPrice> DailyPrice(long InsCode,int FromDate, int ToDate)
-        {
+        public List<DailyPrice> DailyPrice(long InsCode,DateTime FromD, DateTime ToD)
+        {            
+            string start = Assintant.ConvertShamsiToMiladi(FromD);
+            string end = Assintant.ConvertShamsiToMiladi(ToD);
+            Int32.TryParse(start,out int FromDate);
+            Int32.TryParse(end,out int ToDate);            
             var dailypricelist = _db.DailyPrices.Where(i =>
-              i.InsCode == InsCode && i.Deven>=FromDate && i.Deven<=ToDate)
+              i.InsCode == InsCode && i.Deven>= FromDate && i.Deven<= ToDate)
               .ToList();
             return dailypricelist;
         }

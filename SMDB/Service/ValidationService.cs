@@ -31,9 +31,9 @@ namespace SMDP.Service
             }
 
         }
-        public List<DailyPrice> DailyPrice(long InsCode, int FromDate, int ToDate)
+        public List<DailyPrice> DailyPrice(long InsCode, DateTime FromD, DateTime ToD)
         {
-            return _smdps.DailyPrice(InsCode,FromDate,ToDate);
+            return _smdps.DailyPrice(InsCode,FromD,ToD);
         }
         public List<Fund> Fund()
         {
